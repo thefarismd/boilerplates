@@ -1,7 +1,7 @@
 # boilerplates
 Storage for code boilerplates.
 
-# nodeJS, expressJS, bodyParserJS, ejs, mongooseJS
+# Starting codes for nodeJS, expressJS, bodyParserJS, ejs, mongooseJS
 //jshint esversion:6
 
 const express = require("express");
