@@ -86,3 +86,9 @@ app.post("/articles", function (req, res) {
     
 })//
 </pre>
+
+# Chain Route Handlers Using Express
+<pre>
+//---- Chain Route Handlers Using Express ----//
+app.route("articles").get(callbackfunction).post(callbackfunction).delete(callbackfunction);
+</pre>
