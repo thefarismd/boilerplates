@@ -21,6 +21,18 @@ app.use(express.static("public")); <br>
 
 //---- Server Connection ----// <br>
 app.listen(3000, function() { <br>
-console.log("Server started on port 3000"); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log("Server started on port 3000"); <br>
+}); <br>
+//
+
+# MongoDB-Mongoose
+//---- MongoDB-Moongoose Connection DB, Schema & Model ----//<br>
+mongoose.connect('mongodb://127.0.0.1:27017/wikiDB');
+
+const articleSchema = new mongoose.Schema({ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;title: String, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;content: String <br>
 });
+
+const Article = new mongoose.model('article', articleSchema); <br>
 //
