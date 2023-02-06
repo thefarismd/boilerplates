@@ -2,6 +2,7 @@
 Storage for code boilerplates.
 
 # Starting codes for nodeJS, expressJS, bodyParserJS, ejs, mongooseJS
+<pre>
 //jshint esversion:6
 
 //---- Modules ----//
@@ -22,7 +23,7 @@ app.use(express.static("public")); //
 app.listen(3000, function () {
     console.log("Server started on port 3000");
 }); //
-
+</pre>
 
 # MongoDB-Moongoose
 <pre>
