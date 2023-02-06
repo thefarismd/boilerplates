@@ -1,8 +1,8 @@
 # boilerplates
 Storage for code boilerplates.
 
-# Starting codes for nodeJS, expressJS, bodyParserJS, ejs, mongooseJS
-<pre>
+## Starting codes for nodeJS, expressJS, bodyParserJS, ejs, mongooseJS
+```
 //jshint esversion:6
 
 //---- Modules ----//
@@ -23,7 +23,7 @@ app.use(express.static("public")); //
 app.listen(3000, function () {
     console.log("Server started on port 3000");
 }); //
-</pre>
+```
 
 # MongoDB-Moongoose
 <pre>
@@ -39,8 +39,8 @@ const articleSchema = new mongoose.Schema({
 const Article = new mongoose.model('article', articleSchema); //
 </pre>
 
-# Moongoose Snippets
-<pre>
+## Moongoose Snippets
+```
 Article.find({}, function (err, foundDocs) {
     if (!err) {
         res.send(foundDocs);
@@ -61,10 +61,10 @@ newArticle.save(function(err){
         res.send(err);
     };
 });
-</pre>
+```
 
-# Get Route
-<pre>
+## Get Route
+```
 //--- Get Route ----//
 app.get("/articles", function (req, res) {
 
@@ -73,10 +73,10 @@ app.get("/articles", function (req, res) {
     //res.send(String);
     
 })//
-</pre>
+```
 
-# Post Route
-<pre>
+## Post Route
+```
 //---- Post Route ----//
 app.post("/articles", function (req, res) {
 
@@ -85,10 +85,10 @@ app.post("/articles", function (req, res) {
     //res.send(String)
     
 })//
-</pre>
+```
 
-# Chain Route Handlers Using Express
-<pre>
+## Chain Route Handlers Using Express
+```
 //---- Chain Route Handlers Using Express ----//
 app.route("articles").get(callbackfunction).post(callbackfunction).delete(callbackfunction);
-</pre>
+```
