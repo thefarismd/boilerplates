@@ -39,17 +39,50 @@ const articleSchema = new mongoose.Schema({
 const Article = new mongoose.model('article', articleSchema); //
 </pre>
 
+# Moongoose Snippets
+<pre>
+Article.find({}, function (err, foundDocs) {
+    if (!err) {
+        res.send(foundDocs);
+    } else {
+        res.send(err);
+    }
+});
+
+const newArticle = new Article ({
+    title: req.body.title,
+    content: req.body.content
+});
+
+newArticle.save(function(err){
+    if(!err){
+        res.send("Successful added a new article.");
+    } else {
+        res.send(err);
+    };
+});
+</pre>
+
 # Get Route
 <pre>
 //--- Get Route ----//
 app.get("/articles", function (req, res) {
-    Article.find({}, function (err, foundDocs) {
-        if (!err) {
-            res.send(foundDocs);
-        } else {
-            res.send(err);
-        }
-    });
+
+    //res.render("route", {contactContent: contactContent});
+    //res.redirect(route);
+    //res.send(String);
+    
 })//
 </pre>
 
+# Post Route
+<pre>
+//---- Post Route ----//
+app.post("/articles", function (req, res) {
+
+    //res.render("route", {contactContent: contactContent})
+    //res.redirect(route)
+    //res.send(String)
+    
+})//
+</pre>
