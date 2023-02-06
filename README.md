@@ -35,3 +35,15 @@ const articleSchema = new mongoose.Schema({ <br>
 });
 
 const Article = new mongoose.model('article', articleSchema);//
+
+# Get Route
+//--- Get Route ----// <br>
+app.get("/articles", function (req, res) { <br>
+ Article.find({}, function (err, foundDocs) { <br>
+  if (!err) { <br>
+   res.send(foundDocs); <br>
+  } else { <br>
+   res.send(err); <br>
+  } <br>
+ }); <br>
+})//
