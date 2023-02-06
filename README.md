@@ -2,48 +2,54 @@
 Storage for code boilerplates.
 
 # Starting codes for nodeJS, expressJS, bodyParserJS, ejs, mongooseJS
+<pre>
 //jshint esversion:6
 
-//---- Modules ----// <br>
-const express = require("express"); <br>
-const bodyParser = require("body-parser"); <br>
-const ejs = require("ejs"); <br>
-const mongoose = require('mongoose'); <br>
+//---- Modules ----//
+const express = require("express");
+const bodyParser = require("body-parser");
+const ejs = require("ejs");
+const mongoose = require('mongoose');
 
-const app = express(); <br>
-app.set('view engine', 'ejs'); <br>
+const app = express();
+app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({extended: true})); <br>
-app.use(express.static("public"));//
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public")); //
 
 //TODO
 
-//---- Server Connection ----// <br>
-app.listen(3000, function() { <br>
-&nbsp;&nbsp;&nbsp;&nbsp;console.log("Server started on port 3000"); <br>
-});//
+//---- Server Connection ----//
+app.listen(3000, function () {
+    console.log("Server started on port 3000");
+}); //
+</pre>
 
-# MongoDB-Mongoose
-//---- MongoDB-Moongoose Connection DB, Schema & Model ----//<br>
-mongoose.set('strictQuery', false); <br>
+# MongoDB-Moongoose
+<pre>
+//---- MongoDB-Moongoose Connection DB, Schema & Model ----//
+mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://127.0.0.1:27017/wikiDB');
 
-const articleSchema = new mongoose.Schema({ <br>
-&nbsp;&nbsp;&nbsp;&nbsp;title: String, <br>
-&nbsp;&nbsp;&nbsp;&nbsp;content: String <br>
+const articleSchema = new mongoose.Schema({
+    title: String,
+    content: String
 });
 
-const Article = new mongoose.model('article', articleSchema);//
+const Article = new mongoose.model('article', articleSchema); //
+</pre>
 
 # Get Route
-//--- Get Route ----// <br>
-app.get("/articles", function (req, res) { <br>
- Article.find({}, function (err, foundDocs) { <br>
-  if (!err) { <br>
-   res.send(foundDocs); <br>
-  } else { <br>
-   res.send(err); <br>
-  } <br>
- }); <br>
+<pre>
+//--- Get Route ----//
+app.get("/articles", function (req, res) {
+    Article.find({}, function (err, foundDocs) {
+        if (!err) {
+            res.send(foundDocs);
+        } else {
+            res.send(err);
+        }
+    });
 })//
+</pre>
+
