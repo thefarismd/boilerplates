@@ -6,6 +6,8 @@ Storage for code boilerplates.
 //jshint esversion:6
 
 //---- Modules ----//
+require('dotenv').config() //Always at the top
+console.log(process.env) // remove this after you've confirmed it is working
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
