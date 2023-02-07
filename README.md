@@ -26,7 +26,7 @@ app.listen(3000, function () {
 ```
 
 ## Connecting MongoDB-Moongoose
-<pre>
+```
 //---- MongoDB-Moongoose Connection DB, Schema & Model ----//
 mongoose.set('strictQuery', false);
 mongoose.connect('mongodb://127.0.0.1:27017/wikiDB');
@@ -37,7 +37,7 @@ const articleSchema = new mongoose.Schema({
 });
 
 const Article = new mongoose.model('article', articleSchema); //
-</pre>
+```
 
 ## Moongoose Snippets
 ```
