@@ -25,7 +25,7 @@ app.listen(3000, function () {
 }); //
 ```
 
-# MongoDB-Moongoose
+## Connecting MongoDB-Moongoose
 <pre>
 //---- MongoDB-Moongoose Connection DB, Schema & Model ----//
 mongoose.set('strictQuery', false);
