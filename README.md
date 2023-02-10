@@ -94,3 +94,19 @@ app.post("/articles", function (req, res) {
 //---- Chain Route Handlers Using Express ----//
 app.route("articles").get(callbackfunction).post(callbackfunction).delete(callbackfunction);
 ```
+## React
+```
+const React = require("react"); // import React from "react";
+const ReactDom = require("react-dom"); //import ReactDom from "reach-dom";
+
+ReactDom.render(
+  <div>
+    <h1>My Favourite Foods</h1>
+    <ul>
+      <li>Bacon</li>
+      <li>Jamon</li>
+      <li>Noodles</li>
+    </ul>
+  </div>,
+  document.getElementById("root"));
+```
