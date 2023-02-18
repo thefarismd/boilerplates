@@ -96,6 +96,7 @@ app.route("articles").get(callbackfunction).post(callbackfunction).delete(callba
 ```
 ## React
 ```
+//---- React on index.js ----//
 const React = require("react"); // import React from "react";
 const ReactDom = require("react-dom"); //import ReactDom from "reach-dom";
 
@@ -109,4 +110,16 @@ ReactDom.render(
     </ul>
   </div>,
   document.getElementById("root"));
+
+//---- React components ----//
+//Module
+import Heading from "./Heading";
+const React = require("react");
+
+function App() {
+  return <Heading />;
+}
+
+export default App;
 ```
+
